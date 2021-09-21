@@ -168,6 +168,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Data\WebSalesContext.cs" />
+    <Compile Include="Models\Enums\SaleStatus.cs" />
+    <Compile Include="Models\Exceptions\DepartmentException.cs" />
+    <Compile Include="Models\Exceptions\SalesRecordException.cs" />
+    <Compile Include="Models\Exceptions\SellerException.cs" />
+    <Compile Include="Models\SalesRecord.cs" />
+    <Compile Include="Models\Seller.cs" />
     <Compile Include="Views\Home\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
