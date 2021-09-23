@@ -29,7 +29,7 @@ namespace WebSales___WebForms_e_EntityFramework.Services
         {
             return _context.Seller.ToList();
         }
-
+             
         // Adicionar um vendedor
         public void AddSeller(Seller seller)
         {

@@ -35,13 +35,13 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Sellers
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public List<Seller> LvSellers_GetData()
+        public IQueryable<Seller> LvSellers_GetData()
         {
             // Instanciar serviço do departamento
             SellerService sellerService = new SellerService(_context);
 
             // Pegar todos os departamentos
-            var query = sellerService.FindAllSellers();
+            var query = sellerService.FindAllSellers().AsQueryable();
 
             // Retornar
             return query;

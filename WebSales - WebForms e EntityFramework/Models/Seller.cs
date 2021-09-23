@@ -33,6 +33,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         [Required(ErrorMessage = "Campo {0} necessário.")]
         [Range(1100, 1000000, ErrorMessage = "O valor do campo {0} deve estar entre {1} e {2}")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
+        [UIHint("InvariantDouble")]
         [Display(Name = "Salário")]
         public double Salary { get; set; }
 
@@ -42,7 +43,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         public Department Department { get; set; }
 
         // Relacionamento => Registros de Vendas
-        public ICollection<SalesRecord> SalesRecords { get; set; } = new List<SalesRecord>();
+        public virtual ICollection<SalesRecord> SalesRecords { get; set; } = new List<SalesRecord>();
 
         // Método Construtor #1
         public Seller() { }

@@ -17,7 +17,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         public string Name { get; set; }
 
         // Relacionamento => Vendedor
-        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
+        public virtual ICollection<Seller> Sellers { get; set; } = new List<Seller>();
 
         // Método construtor #1
         public Department() { }

@@ -1,6 +1,8 @@
 ﻿namespace WebSales___WebForms_e_EntityFramework.Migrations
 {
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -26,6 +28,7 @@
             //  to avoid creating duplicate seed data.
 
             // Departamentos
+            IList<Department> departments = new List<Department>();
             Department d1 = new Department("Computadores");
             Department d2 = new Department("Eletrónicos");
             Department d3 = new Department("Moda");
@@ -72,6 +75,55 @@
             SalesRecord sr28 = new SalesRecord(new DateTime(2018, 10, 7), 4000.0, SaleStatus.Billed, s6);
             SalesRecord sr29 = new SalesRecord(new DateTime(2018, 10, 23), 12000.0, SaleStatus.Billed, s5);
             SalesRecord sr30 = new SalesRecord(new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s8);
+
+            // Adicionar no departamento os vendedores correspondentes
+            d1.AddSeller(s1);
+            d1.AddSeller(s2);
+            d2.AddSeller(s3);
+            d2.AddSeller(s4);
+            d3.AddSeller(s5);
+            d3.AddSeller(s6);
+            d4.AddSeller(s7);
+            d4.AddSeller(s8);
+
+            // Adicionar no vendedor seus registros de vendas
+            s1.AddSalesRecord(sr1);
+            s1.AddSalesRecord(sr6);
+            s1.AddSalesRecord(sr17);
+            s1.AddSalesRecord(sr27);
+
+            s2.AddSalesRecord(sr7);
+            s2.AddSalesRecord(sr11);
+            s2.AddSalesRecord(sr21);
+
+            s3.AddSalesRecord(sr12);
+            s3.AddSalesRecord(sr25);
+            
+            s4.AddSalesRecord(sr8);
+            s4.AddSalesRecord(sr13);
+            s4.AddSalesRecord(sr16);
+            s4.AddSalesRecord(sr22);
+            s4.AddSalesRecord(sr26);
+
+            s5.AddSalesRecord(sr2);
+            s5.AddSalesRecord(sr14);
+            s5.AddSalesRecord(sr19);
+            s5.AddSalesRecord(sr29);
+
+            s6.AddSalesRecord(sr9);
+            s6.AddSalesRecord(sr10);
+            s6.AddSalesRecord(sr15);
+            s6.AddSalesRecord(sr20);
+            s6.AddSalesRecord(sr28);
+
+            s7.AddSalesRecord(sr4);
+            s7.AddSalesRecord(sr5);
+            s7.AddSalesRecord(sr18);
+            s7.AddSalesRecord(sr23);
+
+            s8.AddSalesRecord(sr3);
+            s8.AddSalesRecord(sr24);
+            s8.AddSalesRecord(sr30);
 
             // Adicionar nas tabelas
             context.Department.AddOrUpdate(d1, d2, d3, d4);

@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Vendedores" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebSales___WebForms_e_EntityFramework.Views.Sellers.Index" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Vendedores</h1>
+    <p>&nbsp;</p>
     <p>
         <asp:Button ID="btnCreate" runat="server" Text="Adicionar" OnClick="BtnCreate_Click" CssClass="btn" BackColor="#1DA3CF" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White" />
     </p>
@@ -16,13 +18,19 @@
                             <th runat="server" scope="col">Id</th>
                             <th runat="server" scope="col">Nome</th>
                             <th runat="server" scope="col">Email</th>
-                            <th runat="server" scope="col">Salário</th>
+                            <th runat="server" scope="col">Salário (R$)</th>
                             <th runat="server" scope="col"></th>
                         </tr>
                         <tr id="itemPlaceholder" runat="server">
                         </tr>
                     </table>
                 </td>
+
+                <asp:DataPager ID="sellersPage" runat="server" PagedControlID="lvSellers" PageSize="10">
+                    <Fields>
+                        <asp:NumericPagerField ButtonCount="5" />
+                    </Fields>
+                </asp:DataPager>
 
             </LayoutTemplate>
 
@@ -53,5 +61,6 @@
             </ItemTemplate>
 
         </asp:ListView>
+
     </div>
 </asp:Content>
