@@ -53,7 +53,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         }
 
         // Retorna a soma de todas as vendas dos vendedores
-        public float TotalSales()
+        public double TotalSales()
         {
             return Sellers.Select(s => s.TotalSales()).Sum();
         }

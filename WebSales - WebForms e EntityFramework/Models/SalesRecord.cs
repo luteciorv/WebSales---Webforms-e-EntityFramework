@@ -24,7 +24,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         [Range(100, 1000000, ErrorMessage = "O campo {0} precisa estar entre {2} e {1}")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         [Display(Name = "Valor total")]
-        public float TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [Display(Name = "Situação")]
@@ -39,7 +39,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         public SalesRecord() { }
 
         // Método construtor #2
-        public SalesRecord(DateTime date, float totalPrice, SaleStatus status, Seller seller)
+        public SalesRecord(DateTime date, double totalPrice, SaleStatus status, Seller seller)
         {
             Date = date;
             TotalPrice = totalPrice;

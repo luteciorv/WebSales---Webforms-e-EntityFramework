@@ -34,7 +34,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         [Range(1100, 1000000, ErrorMessage = "O valor do campo {0} deve estar entre {1} e {2}")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         [Display(Name = "Salário")]
-        public float Salary { get; set; }
+        public double Salary { get; set; }
 
         // Relacionamento => Departamento
         [ForeignKey("Department")]
@@ -48,7 +48,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         public Seller() { }
 
         // Método Construtor #2
-        public Seller(string name, string email, DateTime birthDate, float salary, Department department)
+        public Seller(string name, string email, DateTime birthDate, double salary, Department department)
         {
             Name = name;
             Email = email;
@@ -77,7 +77,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         }
 
         // Retorna o total de vendas
-        public float TotalSales()
+        public double TotalSales()
         {
             return SalesRecords.Select(sr => sr.TotalPrice).Sum();
         }

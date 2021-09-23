@@ -52,6 +52,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Views/Home/Index">Página inicial</a></li>
+                        <li><a runat="server" href="~/Views/Departments/Index">Departamentos</a></li>
+                        <li><a runat="server" href="~/Views/Sellers/Index">Vendedores</a></li>
+                        <li><a runat="server" href="~/Views/SalesRecords/Index">Registros de vendas</a></li>
                         <li><a runat="server" href="~/Views/Home/About">Sobre</a></li>
                         <li><a runat="server" href="~/Views/Home/Contact">Contato</a></li>
                     </ul>
