@@ -26,21 +26,20 @@ namespace WebSales___WebForms_e_EntityFramework.Models
 
         [Required(ErrorMessage = "Campo {0} necessário")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "0:dd/MM/yyyy")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Data de Nascimento")]
         public DateTime BirthDate { get; set; }
 
         [Required(ErrorMessage = "Campo {0} necessário.")]
         [Range(1100, 1000000, ErrorMessage = "O valor do campo {0} deve estar entre {1} e {2}")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
-        [UIHint("InvariantDouble")]
         [Display(Name = "Salário")]
         public double Salary { get; set; }
 
         // Relacionamento => Departamento
         [ForeignKey("Department")]
         public int DepartmentId { get; set; }
-        public Department Department { get; set; }
+        public virtual Department Department { get; set; }
 
         // Relacionamento => Registros de Vendas
         public virtual ICollection<SalesRecord> SalesRecords { get; set; } = new List<SalesRecord>();
@@ -75,6 +74,12 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         public SalesRecord FindSalesRecord(int id)
         {
             return SalesRecords.Where(sr => sr.Id == id).FirstOrDefault();
+        }
+
+        // Encontra e retorna todos os registros de vendas
+        public List<SalesRecord> FindAllSellers()
+        {
+            return SalesRecords.ToList();
         }
 
         // Retorna o total de vendas

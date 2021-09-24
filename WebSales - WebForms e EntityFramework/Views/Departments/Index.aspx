@@ -15,7 +15,7 @@
                 <td runat="server">
                     <table id="itemPlaceholderContainer" runat="server" class="table table-striped table-dark">
                         <tr runat="server">
-                            <th runat="server" scope="col">Id</th>
+                            <th runat="server" scope="col">Identificação</th>
                             <th runat="server" scope="col">Nome</th>
                             <th runat="server" scope="col"></th>
                         </tr>
@@ -23,6 +23,13 @@
                         </tr>
                     </table>
                 </td>
+
+                <asp:Label runat="server" Text="Páginas" Font-Names="Segoe UI"/>
+                <asp:DataPager ID="departmentsPage" runat="server" PagedControlID="lvDepartments" PageSize="10">
+                    <Fields>
+                        <asp:NumericPagerField ButtonCount="5" />
+                    </Fields>
+                </asp:DataPager>
 
             </LayoutTemplate>
 

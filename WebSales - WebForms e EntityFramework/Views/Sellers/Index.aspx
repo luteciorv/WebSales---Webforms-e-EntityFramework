@@ -2,12 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Vendedores</h1>
-    <p>&nbsp;</p>
+    <br />
     <p>
-        <asp:Button ID="btnCreate" runat="server" Text="Adicionar" OnClick="BtnCreate_Click" CssClass="btn" BackColor="#1DA3CF" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White" />
+        <asp:Button ID="btnCreate" runat="server" Text="Adicionar" OnClick="BtnCreate_Click" CssClass="btn" BackColor="#1DA3CF" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White" Font-Names="Segoe UI" />
     </p>
 
-    <div id="Departments">
+    <div id="Sellers">
         <asp:ListView ID="lvSellers" runat="server" ItemType="WebSales___WebForms_e_EntityFramework.Models.Seller"
             SelectMethod="LvSellers_GetData" DataKeyNames="Id">
 
@@ -15,17 +15,18 @@
                 <td runat="server">
                     <table id="itemPlaceholderContainer" runat="server" class="table table-striped table-dark">
                         <tr runat="server">
-                            <th runat="server" scope="col">Id</th>
+                            <th runat="server" scope="col">Identificação</th>
                             <th runat="server" scope="col">Nome</th>
                             <th runat="server" scope="col">Email</th>
-                            <th runat="server" scope="col">Salário (R$)</th>
+                            <th runat="server" scope="col">Departamento</th>
                             <th runat="server" scope="col"></th>
                         </tr>
                         <tr id="itemPlaceholder" runat="server">
                         </tr>
                     </table>
                 </td>
-
+                
+                <asp:Label runat="server" Text="Páginas" Font-Names="Segoe UI"/>
                 <asp:DataPager ID="sellersPage" runat="server" PagedControlID="lvSellers" PageSize="10">
                     <Fields>
                         <asp:NumericPagerField ButtonCount="5" />
@@ -45,11 +46,11 @@
                     </td>
 
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="<%#: Item.Email %>" />
+                        <asp:Label ID="EmailLabel" runat="server" Text="<%#: Item.Email %>" />
                     </td>
 
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="<%#: Item.Salary %>" />
+                        <asp:Label ID="DepartmentLabel" runat="server" Text="<%#: Item.Department.Name %>" />
                     </td>
 
                     <td>
@@ -61,6 +62,6 @@
             </ItemTemplate>
 
         </asp:ListView>
-
     </div>
+
 </asp:Content>

@@ -7,21 +7,57 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace WebSales___WebForms_e_EntityFramework.Views.Sellers
+namespace WebSales___WebForms_e_EntityFramework.Views.SalesRecords
 {
 
 
-    public partial class Details
+    public partial class SimpleSearch
     {
 
         /// <summary>
-        /// Controle lvSeller.
+        /// Controle lMinData_SimpleSearch.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvSeller;
+        protected global::System.Web.UI.WebControls.Label lMinData_SimpleSearch;
+
+        /// <summary>
+        /// Controle tbMinDate_SimpleSearch.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbMinDate_SimpleSearch;
+
+        /// <summary>
+        /// Controle lMaxData_SimpleSearch.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lMaxData_SimpleSearch;
+
+        /// <summary>
+        /// Controle tbMaxDate_SimplesSearch.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbMaxDate_SimplesSearch;
+
+        /// <summary>
+        /// Controle btnSimpleSearch.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSimpleSearch;
 
         /// <summary>
         /// Controle lvSalesRecords.
@@ -31,23 +67,5 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Sellers
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lvSalesRecords;
-
-        /// <summary>
-        /// Controle btnEdit.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEdit;
-
-        /// <summary>
-        /// Controle btnRemove.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemove;
     }
 }

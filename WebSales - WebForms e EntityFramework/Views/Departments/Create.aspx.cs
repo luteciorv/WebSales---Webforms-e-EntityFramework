@@ -29,11 +29,11 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Departments
             // Coletar o nome do departamento informado
             string name = tbName.Text;
 
-            // instanciar o serviço de departamento
-            DepartmentService departmentService = new DepartmentService(_context);
-
             // Criar um departamento
             Department newDepartment = new Department(name);
+
+            // Instanciar o serviço de departamento
+            DepartmentService departmentService = new DepartmentService(_context);
 
             // Tenta adicionar o departamento na tabela
             try

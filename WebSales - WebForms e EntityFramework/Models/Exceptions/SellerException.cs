@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebSales___WebForms_e_EntityFramework.Models.Enums;
 
 namespace WebSales___WebForms_e_EntityFramework.Models.Exceptions
 {
@@ -9,6 +10,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models.Exceptions
     {
         // Atributos
         public string SellerName { get; }
+        public NewSellerField SellerField { get; }
 
         // Método construtor #1
         public SellerException() { }
@@ -23,6 +25,12 @@ namespace WebSales___WebForms_e_EntityFramework.Models.Exceptions
         public SellerException(string message, string sellerName) : this(message)
         {
             SellerName = sellerName;
+        }
+
+        // Método construtor #5
+        public SellerException(string message, string sellerName, NewSellerField sellerField) : this(message, sellerName)
+        {
+            SellerField = sellerField;
         }
     }
 }

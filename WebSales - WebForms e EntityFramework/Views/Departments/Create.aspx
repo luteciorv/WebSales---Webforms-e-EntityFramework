@@ -9,7 +9,7 @@
     <div class="form-group">
         <asp:Label ID="lName" runat="server" CssClass="text-justify" Font-Bold="True" Font-Names="Segoe UI" Text="Nome"></asp:Label>
         <br />
-        <asp:TextBox runat="server" ID="tbName" class="" placeholder="Digite o nome" Height="20px" Width="150px" />
+        <asp:TextBox runat="server" ID="tbName" class="" placeholder="Digite o nome" Height="25px" Width="150px" />
         
         <asp:Label ID="lWarning" runat="server" BackColor="#CC0000" Font-Italic="True" Font-Names="Segoe UI" ForeColor="White"></asp:Label>
         

@@ -27,8 +27,10 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
 
+            if (context.Department.Any() || context.Seller.Any() || context.SalesRecord.Any())
+            { return; }
+
             // Departamentos
-            IList<Department> departments = new List<Department>();
             Department d1 = new Department("Computadores");
             Department d2 = new Department("Eletrónicos");
             Department d3 = new Department("Moda");
@@ -98,7 +100,7 @@
 
             s3.AddSalesRecord(sr12);
             s3.AddSalesRecord(sr25);
-            
+
             s4.AddSalesRecord(sr8);
             s4.AddSalesRecord(sr13);
             s4.AddSalesRecord(sr16);
@@ -129,7 +131,7 @@
             context.Department.AddOrUpdate(d1, d2, d3, d4);
             context.Seller.AddOrUpdate(s1, s2, s3, s4, s5, s6, s7, s8);
             context.SalesRecord.AddOrUpdate(sr1, sr2, sr3, sr4, sr5, sr6, sr7, sr8, sr9, sr10,
-                sr11, sr12, sr13, sr14, sr15, sr16, sr17, sr18, sr19, sr20, sr21, sr22, sr23, 
+                sr11, sr12, sr13, sr14, sr15, sr16, sr17, sr18, sr19, sr20, sr21, sr22, sr23,
                 sr24, sr25, sr26, sr27, sr28, sr29, sr30);
 
             // Salvar

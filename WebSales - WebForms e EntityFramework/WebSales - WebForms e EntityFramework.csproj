@@ -167,6 +167,12 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\SalesRecords\Create.aspx" />
+    <Content Include="Views\SalesRecords\Delete.aspx" />
+    <Content Include="Views\SalesRecords\Details.aspx" />
+    <Content Include="Views\SalesRecords\Edit.aspx" />
+    <Content Include="Views\SalesRecords\Index.aspx" />
+    <Content Include="Views\SalesRecords\SimpleSearch.aspx" />
     <Content Include="Views\Sellers\Create.aspx" />
     <Content Include="Views\Sellers\Delete.aspx" />
     <Content Include="Views\Sellers\Details.aspx" />
@@ -183,7 +189,12 @@
     <Compile Include="Migrations\202109221106357_InitialMigration.designer.cs">
       <DependentUpon>202109221106357_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109241550222_SellerAndSalesRecord_ChangeVariable_DisplayFormat.cs" />
+    <Compile Include="Migrations\202109241550222_SellerAndSalesRecord_ChangeVariable_DisplayFormat.designer.cs">
+      <DependentUpon>202109241550222_SellerAndSalesRecord_ChangeVariable_DisplayFormat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Enums\NewSellerField.cs" />
     <Compile Include="Models\Enums\SaleStatus.cs" />
     <Compile Include="Models\Exceptions\DepartmentException.cs" />
     <Compile Include="Models\Exceptions\SalesRecordException.cs" />
@@ -276,6 +287,48 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\SalesRecords\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SalesRecords\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesRecords\SimpleSearch.aspx.cs">
+      <DependentUpon>SimpleSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SalesRecords\SimpleSearch.aspx.designer.cs">
+      <DependentUpon>SimpleSearch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Sellers\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -314,7 +367,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SalesRecords\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -330,6 +382,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109221106357_InitialMigration.resx">
       <DependentUpon>202109221106357_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109241550222_SellerAndSalesRecord_ChangeVariable_DisplayFormat.resx">
+      <DependentUpon>202109241550222_SellerAndSalesRecord_ChangeVariable_DisplayFormat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

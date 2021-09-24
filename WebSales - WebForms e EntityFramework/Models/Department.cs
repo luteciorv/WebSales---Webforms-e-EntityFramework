@@ -46,7 +46,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
             return Sellers.Where(s => s.Id == id).FirstOrDefault();
         }
 
-        // Encontra e reotorna todos os vendedores
+        // Encontra e retorna todos os vendedores
         public List<Seller> FindAllSellers()
         {
             return Sellers.ToList();

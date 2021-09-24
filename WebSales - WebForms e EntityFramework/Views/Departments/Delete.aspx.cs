@@ -21,12 +21,9 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Departments
 
         }
 
-        // O tipo de retorno pode ser alterado para IEnumerable, no entanto, para dar suporte à paginação de
-        // e classificação, os seguintes parâmetros devem ser adicionados:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
+        /*
+         * 
+         */
         public Department LvDepartment_GetData([QueryString("DepartmentId")] int? departmentId)
         {
             // Retornar

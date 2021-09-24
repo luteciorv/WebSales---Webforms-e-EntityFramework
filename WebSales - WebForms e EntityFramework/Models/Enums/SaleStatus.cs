@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebSales___WebForms_e_EntityFramework.Models.Enums
 {
@@ -13,6 +10,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models.Enums
      */
     public enum SaleStatus : int
     {
+        [Display(Name = "Pendente")]
         Pending = 0,
         Billed = 1,
         Canceled = 2

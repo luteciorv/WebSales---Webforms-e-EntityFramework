@@ -16,7 +16,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "0:dd/MM/yyyy")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Data da venda")]
         public DateTime Date { get; set; }
 
@@ -33,7 +33,7 @@ namespace WebSales___WebForms_e_EntityFramework.Models
         // Relacionamento => Vendedor
         [ForeignKey("Seller")]
         public int SellerId { get; set; }
-        public Seller Seller { get; set; }
+        public virtual Seller Seller { get; set; }
 
         // Método construtor #1
         public SalesRecord() { }

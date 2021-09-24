@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.ModelBinding;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using WebSales___WebForms_e_EntityFramework.Data;
 using WebSales___WebForms_e_EntityFramework.Models;
 
 namespace WebSales___WebForms_e_EntityFramework.Views.Departments
 {
-    public partial class Details : System.Web.UI.Page
+    public partial class Details : Page
     {
         // Context do banco de dados
         private readonly WebSalesContext _context = new WebSalesContext();
@@ -20,27 +17,21 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Departments
 
         }
 
-        // O tipo de retorno pode ser alterado para IEnumerable, no entanto, para dar suporte à paginação de
-        // e classificação, os seguintes parâmetros devem ser adicionados:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
+        /*
+        * Retorna as informações do departamento atual
+        */
         public Department LvDepartment_GetData([QueryString("DepartmentId")] int? departmentId)
         {
             // Retornar
             return _context.Department.Find(departmentId);
         }
 
-        // O tipo de retorno pode ser alterado para IEnumerable, no entanto, para dar suporte à paginação de
-        // e classificação, os seguintes parâmetros devem ser adicionados:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
-        public List<Seller> LvSellers_GetData([QueryString("DepartmentId")] int? departmentId)
+        /*
+        * Retorna todos os vendedores associados a este departamento
+        */
+        public IQueryable<Seller> LvSellers_GetData([QueryString("DepartmentId")] int? departmentId)
         {
-            return _context.Department.Find(departmentId).FindAllSellers();
+            return _context.Department.Find(departmentId).FindAllSellers().AsQueryable();
         }
 
 

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using WebSales___WebForms_e_EntityFramework.Data;
 using WebSales___WebForms_e_EntityFramework.Models;
 using WebSales___WebForms_e_EntityFramework.Services;
@@ -17,7 +14,7 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Sellers
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         /*
@@ -29,12 +26,9 @@ namespace WebSales___WebForms_e_EntityFramework.Views.Sellers
             Response.Redirect("Create.aspx");
         }
 
-        // O tipo de retorno pode ser alterado para IEnumerable, no entanto, para dar suporte à paginação de
-        // e classificação, os seguintes parâmetros devem ser adicionados:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
+        /*
+        * Retorna todos os vendedores
+        */
         public IQueryable<Seller> LvSellers_GetData()
         {
             // Instanciar serviço do departamento
