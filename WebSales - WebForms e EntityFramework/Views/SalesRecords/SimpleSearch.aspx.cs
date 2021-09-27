@@ -47,7 +47,15 @@ namespace WebSales___WebForms_e_EntityFramework.Views.SalesRecords
             // Instanciar serviço de registro de vendas
             SalesRecordService salesRecordService = new SalesRecordService(_context);
 
-            return salesRecordService.FindAllSalesRecords().Where(sr => sr.Date >= minDate && sr.Date <= maxDate && sr.Seller.Department.Id == 10    ).AsQueryable();
+            // Registros de vendas
+            var salesRecords = salesRecordService.FindAllSalesRecords().Where(sr => sr.Date >= minDate && sr.Date <= maxDate);
+
+            // Valor total das vendas
+            Label label = (Label)lvSalesRecords.FindControl("lTotalSalesPrice") ;
+            label.Text = $"Valor total das vendas: R$ {salesRecords.Sum(sr => sr.TotalPrice)}";
+
+            // Retornar os registros de vendas correspondentes
+            return salesRecords.AsQueryable();
         }
     }
 }

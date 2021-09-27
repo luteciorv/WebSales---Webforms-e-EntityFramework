@@ -67,50 +67,5 @@ namespace WebSales___WebForms_e_EntityFramework.Views.SalesRecords
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSimpleSearch;
-
-        /// <summary>
-        /// Controle lMinData_DepartmentSearch.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lMinData_DepartmentSearch;
-
-        /// <summary>
-        /// Controle tbMinDate_DepartmentSearch.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMinDate_DepartmentSearch;
-
-        /// <summary>
-        /// Controle lMaxData_DepartmentSearch.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lMaxData_DepartmentSearch;
-
-        /// <summary>
-        /// Controle tbMaxDate_DepartmentSearch.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMaxDate_DepartmentSearch;
-
-        /// <summary>
-        /// Controle btnDepartmentSearch.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDepartmentSearch;
     }
 }

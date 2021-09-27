@@ -11,7 +11,7 @@
     </p>
     
     <div>
-        <h3>Busca Simples</h3>
+        <h3>Buscar os Registros de vendas entre</h3>
 
         <asp:Label ID="lMinData_SimpleSearch" runat="server" CssClass="text-justify" Font-Bold="True" Font-Names="Segoe UI" Text="Data Mínima" />
         <asp:TextBox runat="server" ID="tbMinDate_SimpleSearch" MaxLength="10" placeholder="dd/mm/aaaa" Height="25px" Width="200px" />
@@ -26,18 +26,4 @@
 
     <br />
     <br />
-
-    <div>
-        <h3>Busca por Departamento</h3>
-
-        <asp:Label ID="lMinData_DepartmentSearch" runat="server" CssClass="text-justify" Font-Bold="True" Font-Names="Segoe UI" Text="Data Mínima" />
-        <asp:TextBox runat="server" ID="tbMinDate_DepartmentSearch" MaxLength="10" placeholder="dd/mm/aaaa" Height="25px" Width="200px" />
-
-        <br />
-
-        <asp:Label ID="lMaxData_DepartmentSearch" runat="server" CssClass="text-justify" Font-Bold="True" Font-Names="Segoe UI" Text="Data Máxima" />
-        <asp:TextBox runat="server" ID="tbMaxDate_DepartmentSearch" MaxLength="10" placeholder="dd/mm/aaaa" Height="25px" Width="200px" />
-
-        <asp:Button ID="btnDepartmentSearch" runat="server" Text="Pesquisar" OnClick="BtnDepartmentSearch_Click" CssClass="btn" BackColor="#1DA3CF" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" ForeColor="White" Font-Names="Segoe UI" />
-    </div>
 </asp:Content>

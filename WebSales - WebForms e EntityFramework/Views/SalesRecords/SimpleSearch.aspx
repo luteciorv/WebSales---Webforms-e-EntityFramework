@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SimpleSearch.aspx.cs" Inherits="WebSales___WebForms_e_EntityFramework.Views.SalesRecords.SimpleSearch" %>
+﻿<%@ Page Title="Registros de Vendas - Busca Simples" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SimpleSearch.aspx.cs" Inherits="WebSales___WebForms_e_EntityFramework.Views.SalesRecords.SimpleSearch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <div>
@@ -24,7 +24,7 @@
                 <td runat="server">
                     <table id="itemPlaceholderContainer" runat="server" class="table table-striped table-dark">
                         <tr runat="server">
-                            <th runat="server" scope="col">Total das Vendas: </th>
+                            <th runat="server" scope="col"><asp:Label runat="server" ID="lTotalSalesPrice" Text="Total das Vendas:"/></th>
                             <th></th>
                             <th></th>
                             <th></th>
